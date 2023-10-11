@@ -1,0 +1,24 @@
+<!-- sldsValidatorIgnore -->
+<template>
+
+    <div class="slds-m-right_xx-small">
+        <lightning-card>
+            <template lwc:if={records}>
+                <lightning-datatable max-row-selection="1" key-field="id" columns={columns} data={records}
+                    onrowselection={onRowSelectionHandler}>
+                </lightning-datatable>
+            </template>
+            <template lwc:if={error}>
+                <h3>Something went wrong {error}</h3>
+            </template>
+        </lightning-card>
+
+        <div class="slds-m-top_small">
+            <template lwc:if={accId}>
+                <c-account-related-contact-list acc-id={accId}></c-account-related-contact-list>
+            </template>
+        </div>
+    </div>
+
+
+</template>

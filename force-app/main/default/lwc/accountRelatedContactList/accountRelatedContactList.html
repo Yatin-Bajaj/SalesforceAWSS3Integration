@@ -1,0 +1,15 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card>
+
+        <template lwc:if={records}>
+            <lightning-datatable key-field="id" columns={columns} data={records}>
+            </lightning-datatable>
+        </template>
+     
+        <template lwc:if={error}>
+            <h3>Something went wrong {error}</h3>
+        </template>
+        
+    </lightning-card>
+</template>
